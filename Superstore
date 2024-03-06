@@ -33,15 +33,19 @@ SELECT *
 FROM superstore
 order by price ASC;
 
+#This Query shows the average rating recieved in each category from highest to lowest
+
 SELECT AVG(average_rating),category
 FROM superstore
 GROUP BY category DESC;
 
+#This query shows Kitchen Supply products based on price
 SELECT *
 FROM superstore
 WHERE category= 'Kitchen Supplies'
 ORDER BY PRICE ASC;
 
+# This query shows how many stock quantity are available for air purifiers
 SELECT item_name,stock_quantity
 FROM superstore
 WHERE item_name= 'Air Purifier'
